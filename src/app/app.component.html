@@ -1,0 +1,89 @@
+<h1>Pbkdf2</h1>
+
+AES Secret :&nbsp; <br /><br /><input
+  type="text"
+  placeholder="AES Secret"
+  [(ngModel)]="aesSecr"
+  class="token"
+/><br /><br />
+Salt/RndValue :&nbsp; <br /><br /><input
+  type="text"
+  placeholder="Salt/RndValue"
+  [(ngModel)]="rndValue"
+  class="token"
+/><br /><br />
+
+<hr />
+<hr />
+Encryption/Form Data<br /><br />
+<input
+  class="input"
+  type="text"
+  placeholder="data to encrypt"
+  [(ngModel)]="formData"
+/><br /><br />
+<input
+  type="button"
+  value="Encrypt"
+  (click)="encryptUsingAES256()"
+/><br /><br />
+<span>
+  Encrypted Text:<br />
+  {{ encrypted }}
+</span>
+
+<hr />
+<hr />
+Response to Decryption <br /><br />
+<input
+  class="input"
+  type="text"
+  placeholder="data to decrypt"
+  [(ngModel)]="response"
+/><br /><br />
+<input type="button" value="Decrypt" (click)="decryptUsingAES256()" />&nbsp;
+
+<p>
+  Decrypted Text:<br />
+  {{ decrypted }}
+</p>
+
+<hr />
+
+<h1>AES</h1>
+
+Key Secret :&nbsp; <br /><br /><input
+  type="text"
+  placeholder="Secret"
+  [(ngModel)]="secret"
+  class="token"
+/><br /><br />
+
+Encryption/Form Data<br /><br />
+<input
+  class="input"
+  type="text"
+  placeholder="data to encrypt"
+  [(ngModel)]="userEmail"
+/><br /><br />
+<input type="button" value="Encrypt" (click)="encryptUsingAES()" /><br /><br />
+<span>
+  Encrypted Text:<br />
+  {{ encryptedAES }}
+</span>
+
+<hr />
+<hr />
+Response to Decryption <br /><br />
+<input
+  class="input"
+  type="text"
+  placeholder="data to decrypt"
+  [(ngModel)]="decipherText"
+/><br /><br />
+<input type="button" value="Decrypt" (click)="decryptUsingAES()" />&nbsp;
+
+<p>
+  Decrypted Text:<br />
+  {{ decryptedAES }}
+</p>
